@@ -10,7 +10,9 @@
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
 		$header = $('#header'),
-		$main = $('#main')
+		$nav = $('#nav'),
+		$main = $('#main'),
+		$navPanelToggle, $navPanel, $navPanelInner;
 
 	// Breakpoints.
 		breakpoints({
@@ -124,7 +126,10 @@
 	// Nav Panel.
 
 		// Toggle.
-
+			$navPanelToggle = $(
+				'<a href="#navPanel" id="navPanelToggle">Menu</a>'
+			)
+				.appendTo($wrapper);
 
 			// Change toggle styling once we've scrolled past the header.
 				$header.scrollex({
